@@ -1,12 +1,10 @@
 package tn.tuniprob.gestionmagasin.GestionEmp;
 
-abstract public class Employe {
+public abstract class Employe {
     protected int identifiant;
     protected String nom;
     protected String adresse;
     protected double nbr_heures;
-
-
 
     public Employe(int identifiant, String nom, String adresse, double nbr_heures) {
         this.identifiant = identifiant;
@@ -47,7 +45,7 @@ abstract public class Employe {
         this.nbr_heures = nbr_heures;
     }
 
-
+    @Override
     public String toString() {
         return "Employe{" +
                 "identifiant=" + identifiant +
@@ -55,8 +53,10 @@ abstract public class Employe {
                 ", adresse='" + adresse + '\'' +
                 ", nbr_heures=" + nbr_heures + "\n";
     }
-    abstract public double calculeSalaire();
 
+    public abstract double calculeSalaire();
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
