@@ -27,4 +27,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+
+### Project Gestion ###
 TD1.iml
+.idea
